@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <table style="width: 100%; color: darkgreen">
+        <tr>
+          <th colspan="2" style="text-align: center">
+            ĐĂNG KÝ THÔNG TIN VIỆC LÀM
+          </th>
+        </tr>
+        <tr>
+          <td colspan="2">Thông tin cá nhân</td>
+        </tr>
+        <tr>
+          <td style="width: 30%">Họ & tên :</td>
+          <td><input type="text" style="width: 240px" /></td>
+        </tr>
+        <tr>
+          <td>Ngày tháng năm sinh :</td>
+          <td><input type="date" /></td>
+        </tr>
+        <tr>
+          <td>Giới tính :</td>
+          <td>
+            <select name="gender">
+              <option value="male">Nam</option>
+              <option value="female">Nữ</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Tình trạng hôn nhân :</td>
+          <td>
+            <select>
+              <option value="single">Độc thân</option>
+              <option value="married">Đã kết hôn</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">Thông tin liên lạc</td>
+        </tr>
+        <tr>
+          <td>Địa chỉ :</td>
+          <td><input type="text" style="width: 500px" /></td>
+        </tr>
+        <tr>
+          <td>Tỉnh/Thành phố :</td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td>Số điện thoại :</td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td>Số điện thoại di động :</td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td>Email :</td>
+          <td><input type="email" style="width: 240px" /></td>
+        </tr>
+        <tr>
+          <td colspan="2">Trình độ học vấn</td>
+        </tr>
+        <tr>
+          <td>Trình độ học vấn :</td>
+          <td>
+            <select>
+              <option value="1">Trung học</option>
+              <option value="2">Cao đẳng</option>
+              <option value="3">Đại học</option>
+              <option value="4">Thạc sĩ</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Thông tin về học vấn :</td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td>Ngoại ngữ:</td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td>Kỹ năng :</td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="2">Kinh nghiệm làm việc</td>
+        </tr>
+        <tr>
+          <td>Số năm kinh nghiệm :</td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td>Kinh nghiệm làm việc :</td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="2">Mong muốn của bản thân</td>
+        </tr>
+        <tr>
+          <td style="vertical-align: center">Việc làm mong muốn :</td>
+          <td><textarea></textarea></td>
+        </tr>
+        <tr>
+          <td>Mức lương thỏa thuận:</td>
+          <td><input type="text" /> VNĐ</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="background-color: transparent; text-align: center">
+            <button type="submit">Gửi hồ sơ</button>
+            <button type="reset">Xóa form</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
+<style>
+  table td:nth-child(1) {
+    text-align: end;
+    vertical-align: top;
+    padding-bottom: 5px;
+  }
+
+  table td[colspan="2"] {
+    text-align: start;
+    background-color: darkgreen;
+    color: lightgray;
+  }
+  input,
+  textarea,
+  select {
+    border: 1px solid green;
+  }
+  textarea {
+    width: 450px;
+    height: 50px;
+  }
+</style>
