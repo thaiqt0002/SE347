@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Table</title>
+  </head>
+  <body>
+    <form>
+      <table style="border: 5px double black; width: 550px">
+        <tr>
+          <th colspan="4">PHIẾU THĂM DÒ Ý KIẾN</th>
+        </tr>
+        <tr>
+          <td style="width: 100px">Tên đăng nhập:</td>
+          <td style="width: 80px"><input type="text" name="textInput" /></td>
+          <td style="width: 70px">Giới tính:</td>
+          <td style="display: flex">
+            <input type="radio" name="radioGroup" value="radio1" />Nam
+            <input type="radio" name="radioGroup" value="radio2" />Nữ
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">Những mục bạn thường quan tâm trên Internet</td>
+        </tr>
+        <tr>
+          <td colspan="3" style="padding-left:80px">
+            <input type="checkbox" name="checkbox1" value="checkbox1" />Tin tức
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" style="padding-left:80px">
+            <input type="checkbox" name="checkbox1" value="checkbox1" />Giải trí
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" style="padding-left:80px">
+            <input type="checkbox" name="checkbox1" value="checkbox1" />Góc học tập
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" style="padding-left:80px">
+            <input type="checkbox" name="checkbox1" value="checkbox1" />Các mục khác
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: center">
+            <button type="submit">Gửi đi</button>
+            <button type="reset">Phục hồi</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

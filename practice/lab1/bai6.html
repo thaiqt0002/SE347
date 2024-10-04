@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=., initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        height: 85vh;
+        background-color: gray;
+        padding: 0;
+        border: 1px solid black;
+        width: 60%;
+      "
+    >
+      <div
+        style="
+          background-color: white;
+          width: 60%;
+          padding: 0 30px 0 30px;
+          border-right: 1px solid black;
+        "
+      >
+        <h1 style="text-align: center">Two Column Flexible</h1>
+        <p style="color: red; text-align: center">Ver 2.3</p>
+        <p>
+          <b style="font-size: 12px; color: blue">T</b>his is a very easy page
+          layout which you have probably seen on sites such as ALA (A List
+          Apart). Each column is created with simply two div tags.
+        </p>
+        <p>
+          <b style="font-size: 12px; color: blue">T</b>he left column uses float
+          left and has a percentage width allowing both column to 'flow' as the
+          browser window changes shape
+        </p>
+        <p>
+          <b style="font-size: 12px; color: blue">T</b>his template has been
+          tested in:
+        </p>
+        <ul type="disc">
+          <li>Mozilla 1.5b & Firefox 0.8</li>
+          <li>Internet Explorer 6</li>
+          <li>Netscape 7.1</li>
+          <li>Opera 7.11</li>
+        </ul>
+        <p><b style="color: blue">c</b>hanges in this version:</p>
+        <ol type="1">
+          <li>
+            Defined zero padding for the body to fix the problem in Opera.
+          </li>
+        </ol>
+      </div>
+      <div
+        style="
+          width: 36%;
+          padding: 30px 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        "
+      >
+        <div
+          style="
+            background-color: white;
+            width: 70%;
+            text-shadow: 5px 5px darkgrey;
+            height: 50px;
+            margin: 0px;
+            font-size: 40px;
+            text-align: center;
+          "
+        >
+          Your logo
+        </div>
+        <div style="text-align: center">
+          <p style="padding-bottom: 40px">
+            <b style="font-size: 12px; color: blue">T</b>he right column can be
+            used for navigation links, search box etc.
+          </p>
+          <a href="#">View more templates.</a>
+        </div>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <div
+      style="
+        width: 60%;
+        height: 400px;
+        padding: 20px 20px 0 20px;
+        background-color: gray;
+        display: flex;
+        gap: 20px;
+        border: 1px solid black;
+      "
+    >
+      <div
+        style="
+          width: 20%;
+          background-color: darkgrey;
+          height: 320px;
+          text-align: center;
+          padding: 10px 10px 10px 10px;
+          border: 3px solid black;
+        "
+      >
+        <p>Left Column</p>
+        <p>The left col can be used for navigation link, search box etc.</p>
+        <a href="#"><b style="color: blue">v</b>iew more templates.</a>
+      </div>
+      <div
+        style="
+          width: 75%;
+          border: 3px solid black;
+          border-bottom: none;
+          background-color: white;
+        "
+      >
+        <div
+          style="
+            background-color: white;
+            width: fit-content;
+            padding: 0 10px 0 10px;
+            height: 60px;
+            font-size: 40px;
+            text-align: center;
+            border: 1px solid black;
+            text-shadow: 5px 3px darkgrey;
+            margin: 0;
+            padding: 5px 15px 0 10px;
+          "
+        >
+          Your logo
+        </div>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        border: 1px solid black;
+      "
+    >
+      <div style="height: 50px; width: 100%">Header Content Here</div>
+      <div
+        style="
+          display: flex;
+          height: 85vh;
+          background-color: gray;
+          padding: 0;
+          border-top: 1px solid black;
+        "
+      >
+        <div
+          style="
+            background-color: white;
+            width: 60%;
+            padding: 0 30px 0 30px;
+            border-right: 1px solid black;
+          "
+        >
+          <h1 style="text-align: center">Two Column Flexible With Header</h1>
+          <p style="color: red; text-align: center">Ver 2.3</p>
+          <p>
+            <b style="font-size: 12px; color: blue">T</b>his is a very easy page
+            layout which you have probably seen on sites such as ALA (A List
+            Apart). Each column is created with simply two div tags.
+          </p>
+          <p>
+            <b style="font-size: 12px; color: blue">T</b>he left column uses
+            float left and has a percentage width allowing both column to 'flow'
+            as the browser window changes shape
+          </p>
+          <p>
+            <b style="font-size: 12px; color: blue">T</b>his template has been
+            tested in:
+          </p>
+          <ul type="disc">
+            <li>Mozilla 1.5b & Firefox 0.8</li>
+            <li>Internet Explorer 6</li>
+            <li>Netscape 7.1</li>
+            <li>Opera 7.11</li>
+          </ul>
+          <p><b style="color: blue">c</b>hanges in this version:</p>
+          <ol type="1">
+            <li>
+              Defined zero padding for the body to fix the problem in Opera.
+            </li>
+          </ol>
+        </div>
+        <div
+          style="
+            flex-grow: 1;
+            padding: 30px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          "
+        >
+          <p style="font-size: 24px">Right column</p>
+          <div style="text-align: center">
+            <p style="padding-bottom: 40px">
+              <b style="font-size: 12px; color: blue">T</b>he right column can
+              be used for navigation links, search box etc.
+            </p>
+            <a href="#"><b style="color: blue">v</b>iew more templates.</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <div style="width: 60%; border: 1px solid black">
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          padding-bottom: 10px;
+          background-color: silver;
+        "
+      >
+        <div
+          style="
+            background-color: white;
+            width: fit-content;
+            padding: 0 10px 0 10px;
+            height: 60px;
+            font-size: 40px;
+            text-align: center;
+            border: 1px solid black;
+            text-shadow: 5px 3px darkgrey;
+            margin: 0;
+            padding: 5px 15px 0 10px;
+          "
+        >
+          Your logo
+        </div>
+      </div>
+      <div
+        style="
+          height: 30px;
+          background-color: darkgray;
+          border-top: 1px solid black;
+          border-bottom: 1px solid black;
+          display: flex;
+          align-items: center;
+          padding-left: 5px;
+        "
+      >
+        30 Dec 02
+      </div>
+      <div style="display: flex">
+        <div
+          style="
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            align-items: center;
+            text-align: center;
+            border-right: 1px solid black;
+            background-color: silver;
+          "
+        >
+          <p>Menu</p>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+          <br /><br />
+          <a href="#">View more templates.</a>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            padding: 0 10px 0 10px;
+          "
+        >
+          <h1>Two column fixed width with Header & Footer</h1>
+          <p1 style="color: red">Ver2.3</p1>
+          <p>
+            <b style="color: blue; font-size: 12px;">T</b>his website is actually a replica of one of my other websites which
+            uses tables for the very same layout. I wanted to see it could be
+            done and it seems to work perfect.
+          </p>
+          <p>
+            <b style="color: blue; font-size: 12px;">T</b>his is basically set up as follows: there is a main outer div which
+            centers the page and is a fixed width. There are 4 main div's within
+            this outer div; header (#hdr), bar (#bar), body (#body) and footer
+            (#footer). The body div holds 2 more divs, the left div which for
+            navigation and the right div is for our content.
+          </p>
+        </div>
+      </div>
+      <div style="border-top: 1px solid black; height:30px; background-color: darkgray; display:flex; justify-content: center; align-items: center;">Copyright (c) You 2003</div>
+    </div>
+  </body>
+</html>
