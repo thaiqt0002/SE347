@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .container input {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 90%;
+        }
+        .container button {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .container button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Kiểm tra số nguyên tố</h2>
+        <input type="number" id="numberInput" placeholder="Nhập số nguyên">
+        <button onclick="checkPrime()">Kiểm tra!</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function isPrime(num) {
+            if (num <= 1) return false;
+            if (num <= 3) return true;
+            if (num % 2 === 0 || num % 3 === 0) return false;
+            for (let i = 5; i * i <= num; i += 6) {
+                if (num % i === 0 || num % (i + 2) === 0) return false;
+            }
+            return true;
+        }
+
+        function checkPrime() {
+            let num;
+            while (true) {
+                num = parseInt(document.getElementById('numberInput').value);
+                if (!isNaN(num)) break;
+                alert('Hãy nhập số nguyên hợp lệ.');
+                document.getElementById('numberInput').value = '';
+                return;
+            }
+
+            const resultDiv = document.getElementById('result');
+            if (isPrime(num)) {
+                resultDiv.innerText = `${num} là số nguyên tố.`;
+            } else {
+                resultDiv.innerText = `${num} không phải là số nguyên tố.`;
+            }
+        }
+    </script>
+</body>
+</html>

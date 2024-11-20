@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Send Email</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .box button {
+        display: block;
+        margin: 10px 0;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .box button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <a href="#" onclick="sendEmail()">Bấm vào đây để gửi email</a>
+      <button onclick="sendEmail()">Gửi email</button>
+    </div>
+
+    <script>
+      function sendEmail() {
+        const recipient = prompt("Nhập email người nhận:");
+        if (!recipient) return;
+
+        const subject = prompt("Nhập chủ đề của email:");
+        if (!subject) return;
+
+        const confirmSend = confirm(
+          `Có muốn gửi đến email ${recipient} với chủ đề là "${subject}"?`
+        );
+        if (confirmSend) {
+          const mailtoLink = `mailto:${recipient}?subject=${subject}`;
+          parent.location.href = mailtoLink;
+        }
+      }
+    </script>
+  </body>
+</html>

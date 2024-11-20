@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Age</title>
+    <script>
+        function calculateAge() {
+            const currentYear = new Date().getFullYear();
+            const birthYear = document.getElementById('birthYear').value;
+            const age = currentYear - birthYear;
+
+            if (birthYear > currentYear) {
+                alert('Năm sinh không được lớn hơn năm hiện tại. Vui lòng nhập lại.');
+                document.getElementById('birthYear').value = '';
+                document.getElementById('age').innerText = '';
+            } else {
+                document.getElementById('age').innerText = `Tuổi của bạn là: ${age}`;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Nhập năm sinh của bạn</h1>
+    <form onsubmit="event.preventDefault(); calculateAge();">
+        <label for="birthYear">Năm sinh:</label>
+        <input type="number" id="birthYear" name="birthYear" required>
+        <button type="submit">Tính tuổi</button>
+    </form>
+    <p id="age"></p>
+</body>
+</html>

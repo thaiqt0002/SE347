@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính cơ bản</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .calculator {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .input-field {
+            width: 100px;
+            height: 40px;
+            font-size: 18px;
+            text-align: right;
+            margin-right: 10px;
+            border: 2px solid darkgreen;
+            border-radius: 5px;
+        }
+        .button {
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-right: 5px;
+        }
+        .button:hover {
+            background-color: #ddd;
+        }
+        .button.operator {
+            background-color: #ff9500;
+            color: #fff;
+        }
+        .button.operator:hover {
+            background-color: #e08a00;
+        }
+        .result {
+            width: 100px;
+            height: 40px;
+            font-size: 18px;
+            text-align: right;
+            border: 2px solid darkgreen;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="row">
+            <input type="number" id="num1" class="input-field" placeholder="0">
+            <button class="button operator" onclick="calculateResult('+')">+</button>
+            <button class="button operator" onclick="calculateResult('-')">-</button>
+            <button class="button operator" onclick="calculateResult('*')">*</button>
+            <button class="button operator" onclick="calculateResult('/')">/</button>
+            <button class="button operator" onclick="calculateResult('^')">^</button>
+            <input type="number" id="num2" class="input-field" placeholder="0">
+            <div style="display:flex; align-items: center;">=</div>
+            <input type="text" id="result" class="result" readonly>
+        </div>
+    </div>
+
+    <script>
+        function calculateResult(operation) {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            let result;
+
+            switch (operation) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num1 / num2;
+                    break;
+                case '^':
+                    result = Math.pow(num1, num2);
+                    break;
+                default:
+                    result = 'Error';
+            }
+
+            document.getElementById('result').value = result;
+        }
+    </script>
+</body>
+</html>
