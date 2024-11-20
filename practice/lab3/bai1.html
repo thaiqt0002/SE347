@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập Tên và Tuổi</title>
+</head>
+<body>
+    <h1>Nhập Tên và Tuổi</h1>
+    <button onclick="getUserInfo()">Nhập Thông Tin</button>
+
+    <script>
+        function getUserInfo() {
+            var name = prompt("Nhập tên của bạn:");
+            var age = prompt("Nhập tuổi của bạn:");
+            document.write('<b>' + name + '</b> <u>' + age + '</u>');
+        }
+    </script>
+</body>
+</html>
